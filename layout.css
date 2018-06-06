@@ -1,0 +1,179 @@
+/* CSS Document */
+html{
+	width:100%;
+	height:100%;
+	}
+body
+{
+	background:#666;
+	text-align:center;
+	vertical-align:middle;	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+#wrap
+{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	background:url(img/move-bg.png) repeat-x;
+	background-size:cover;
+
+	position:relative;
+	overflow:hidden;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#floor
+{
+	width:100%;
+	height:43px;
+	background:url(img/floorTile.jpg) repeat-x;
+	background-size:contain;
+	position:absolute;
+	bottom:0px;
+}
+
+
+#player
+{
+	width:136px;
+	height:150px;
+	background:url(img/mariowalk.png);
+	position:absolute;
+	bottom:43px;
+	left:100px;
+	
+	animation: walking 1s steps(2) infinite;
+}
+
+@keyframes walking {
+    from {background-position: 0px;}
+    to{background-position: 272px;}
+}
+
+
+
+.coin
+{
+	width:80px;
+	height:80px;
+	background:url(img/coin.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 250px;
+	left:700px;
+}
+
+.mushroom{
+		width:80px;
+	height:80px;
+	background:url(img/mushroom.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 250px;
+	left:1000px;
+}
+
+#scoreBox
+{
+	width:411px;
+	height:70px;
+	position:absolute;
+	top:10px;
+	right:0px;
+	overflow:hidden;
+	background:url(img/scoreBacking.png);
+	
+}
+
+
+
+#scoreBox div
+{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:30px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #333333;
+	display:inline;
+}
+
+#GameScreen
+{
+	background:url(img/mario-bg.png) no-repeat #594B2F;
+	width:100%;
+	height:100%;
+	z-index:999;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background-size:cover;
+}
+
+@font-face
+{
+font-family: "Fixedsys";
+src: url('font/fixedsys.ttf');
+}
+
+#GameOver{
+	font-family:"Fixedsys";
+	font-size:45px;
+	z-index:1000;
+	background:black;
+	opacity:0.88;
+	border-radius:15px;
+	border:3px solid white;
+	
+	text-align:center;
+	width:597px;
+	height:auto;
+	margin:0 auto;
+	padding:15px;
+	position:relative;
+	top:80px;
+	color:#FFF;
+	
+}
+
+#GameOver h2{
+	font-size:55px;
+	color:#D2FF4D;
+	margin:10px auto;
+	padding:10px;
+}
+
+.getcoin{ 
+background:url(img/coin.png) no-repeat left center; 
+background-size:contain;
+height:55px;
+padding:10px 10px 10px 90px;
+margin:10px;
+display:inline-block;
+}
+
+.getmushroom{ 
+background:url(img/mushroom.png) no-repeat left center; 
+background-size:contain;
+height:55px;
+padding:10px 10px 10px 90px;
+margin:10px;
+display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
