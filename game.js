@@ -42,7 +42,8 @@ $(document).ready(function(e) {
 
 		
     //when click the screen, start the game
-    $('#GameScreen').bind("click", function(){
+    $('#GameScreen').bind("touchstart click", function(){
+	    $('#GameScreen').hide();
    		$('#GameScreen').remove();
     	startGame();
     })
