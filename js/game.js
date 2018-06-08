@@ -144,14 +144,14 @@ var timer = setInterval(countdown, 1000);
  
 function marioJump()
 {
-    if(isJumping==2)
+    if(isJumping==1)
     return;
  
     isJumping ++;
     //goTo jump frame
 	
  //   $("#player").css("background-position", 230)
- 
+
     $("#player").animate({
         bottom: 320},500, 'swing',
         function(){
@@ -163,7 +163,8 @@ function marioJump()
             isJumping = 0;
             })
  
-    })
+    });
+	 $("#player").addClass("animated").addClass("flipInX");
  
 }
 
