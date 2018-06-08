@@ -1,0 +1,389 @@
+/* CSS Document */
+html{
+	width:100%;
+	height:100%;
+	
+	animation-fill-mode:forwards;
+	}
+@font-face
+{
+font-family: "Fixedsys";
+src: url('../font/fixedsys.ttf');
+}
+
+@font-face
+{
+font-family: "murder";
+src: url('../font/youmurdererbb_reg.ttf');
+}
+body
+{
+	display:flex;
+	background:#666;
+	text-align:center;
+	vertical-align:middle;	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+#wrap
+{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	background:url(../img/move-bg.png) repeat-x;
+	background-size:cover;
+
+	position:relative;
+	overflow:hidden;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#floor
+{
+	width:100%;
+	height:150px;
+	background:url(../img/floorTile.png) repeat-x  center 10px;
+	background-size:contain;
+	position:absolute;
+	bottom:0px;
+}
+
+
+#player
+{
+	width:136px;
+	height:189px;
+	background-image:url(../img/mrbandage.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	position:absolute;
+	bottom:43px;
+	left:100px;
+	z-index:99;
+	/*animation: walking 1s steps(2) infinite;*/
+	
+}
+#player.mrghost
+{
+	background-image:url(../img/mrghost.png);
+}
+
+#player.mrpumpkin
+{
+	background-image:url(../img/mrpumpkin.png);
+}
+
+
+
+@keyframes walking {
+    from {background-position: 0px;}
+    to{background-position: 272px;}
+}
+
+
+
+.pumpkin
+{
+	width:141px;
+	height:141px;
+	background:url(../img/pumpkin.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 280px;
+	left:700px;
+}
+
+.pumpkin:after,
+.graveyard:after,
+.flyghost:after,
+.death:after{
+	color:#FFF;
+	text-shadow:1px 1px 2px #1A1A1A;
+	position:absolute;
+	top:10px;
+	left:105px;
+	font-size:19px;
+	font-family:"Verdana";
+	}
+
+.pumpkin:after{
+	content:"+pumpkin";
+	}
+	
+.graveyard{
+		width:210px;
+	height:148px;
+	background:url(../img/graveyard.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 74px;
+	left:1000px;
+}
+
+.graveyard:after{
+	left:120px;
+	content:"+graveyard";
+}
+
+.flyghost{
+		width:154px;
+	height:195px;
+	background:url(../img/flyghost.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 285px;
+	left:1000px;
+}
+
+.flyghost:after{
+	left:90px;
+	content:"+ghost";
+}
+
+.death{
+	width:285px;
+	height:248px;
+	background:url(../img/death.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	z-index:99;
+	bottom: 74px;
+	left:1000px;
+}
+
+.death:after{
+	content:"+Mr.Death";
+}
+
+#scoreBox
+{
+	width:100%;
+	text-align:right;
+	height:80px;
+	position:absolute;
+	top:10px;
+	right:0px;
+	overflow:hidden;
+	
+}
+#scoreBox div{
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:contain;
+	width:auto;
+	height:auto;
+	
+	display:inline-flex;
+	flex-direction:row;
+	font-family: "murder";
+	color:#FFFFCC;
+	font-size:65px;
+	padding:20px 0 0 128px;
+	margin-right:20px;
+	text-shadow:1px 1px 4px #1A1A1A;
+	
+}
+#scoreBox .star{
+	background-image:url(../img/star.png);
+}
+#scoreBox .heart{
+	background-image:url(../img/heart.png);
+}
+
+/*
+#scoreBox div
+{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#FFF;
+	font-size:30px;
+	font-weight:bold;
+	text-shadow: 1px 1px 1px #333333;
+	display:inline;
+}
+*/
+
+#GameScreen
+{
+	background:url(../img/artboard-01.png) no-repeat center bottom #594B2F;
+	width:100%;
+	height:100%;
+	z-index:999;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background-size:1024 768;
+	background-size:cover;
+}
+
+.tap{
+	font-family:"murder";
+	color:#FFF;
+	font-size:50px;
+	text-shadow:2px 2px 4px #1C1C1C;
+	position:absolute;
+	width:100%;
+	bottom:20%;
+	text-align:center;
+	
+	}
+	
+.spider{
+	background:url(../img/spider.png) no-repeat center bottom;
+	background-size:contain;
+	width:185px;
+	height:480px;
+
+	position:absolute;
+	right:20%;
+	top:-10px;
+	}
+.smile{
+	background:url(../img/smile.png) no-repeat center bottom;
+	background-size:contain;
+	opacity:0.7;
+	width:180px;
+	height:156px;
+
+	position:absolute;
+	right:5%;
+	bottom:5%;
+	
+	}
+
+
+#GameOver{
+	font-family:"Fixedsys";
+	font-size:45px;
+	z-index:1000;
+	background:black;
+	opacity:0.88;
+	border-radius:15px;
+	border:3px solid white;
+	
+	text-align:center;
+	width:597px;
+	height:auto;
+	margin:0 auto;
+	padding:15px;
+	position:relative;
+	top:80px;
+	color:#FFF;
+	
+}
+
+#GameOver h2{
+	font-family:"Fixedsys";
+	font-size:55px;
+	color:#D2FF4D;
+	margin:10px auto;
+	padding:10px;
+}
+
+.getpumpkin{ 
+background:url(../img/pumpkin.png) no-repeat left center; 
+background-size:contain;
+height:55px;
+padding:10px 10px 10px 90px;
+margin:10px;
+display:inline-block;
+}
+
+.getgraveyard{ 
+background:url(../img/graveyard.png) no-repeat left center; 
+background-size:contain;
+height:55px;
+padding:10px 10px 10px 90px;
+margin:10px;
+display:inline-block;
+}
+
+/* select player*/
+
+#SelectPlayer
+{
+	width:100%;
+	height:100%;
+	z-index:990;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.selectp{ 
+	font-family:"murder";
+	color:#FFF;
+	font-size:42px;
+	display:block; 
+	margin:5% 0; 
+	text-align:center;
+	text-shadow:2px 2px 3px #1A1A1A;
+}
+
+
+.flexbox{
+	display:block;
+	width:auto;
+	height:100%;
+	margin:auto;
+}
+.board{
+	background:url(../img/boardbg.png) no-repeat center center #1A1A1A;
+	background-size:cover;
+	
+	width:22%;
+	height:50%;
+	
+	border:4px solid black;
+	border-radius:15px;
+	margin-right:15px;
+	box-shadow:2px 1px 6px #EBF757;
+	font-family:"murder";
+	color:#FFF;
+	font-size:45px;
+	text-align:center;
+	text-shadow:2px 2px 4px black;
+	display:inline-flex;
+	flex-direction:column;
+}
+
+.board:hover,
+.board:focus,
+.board:active{
+		border:6px solid #EBF757;
+		box-shadow:2px 1px 6px #EBF757;
+}
+
+.board:last-child{ margin-right:0;}
+.board .play,
+.board .title{
+	display:block;
+	text-align:center;
+	width:100%;
+	
+}
+
+
+.board .play{
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: flex-start;
+    height: 70%;
+    width: 90%;
+    margin: 10% auto 0;
+}
+
+.board .title{
+	
+	justify-content:flex-end;
+	margin:10% auto 0;
+	width:auto;
+	height:20%;
+}
+
+.mrghost{ background-image:url(../img/mrghost.png);}
+.mrbandage{ background-image:url(../img/mrbandage.png);}
+.mrpumpkin{ background-image:url(../img/mrpumpkin.png);}

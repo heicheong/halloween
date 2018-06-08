@@ -7,14 +7,17 @@
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="apple-touch-icon" sizes="180x180" href="img/appicon.png" />
-<link href="layout.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+
 </head>
 
 <body>
 <div id="wrap">
    <div id="scoreBox">
-    	<div>Timer:<span class="sec"></span>   </div>
-        <div class="score">Score 0 </div>
+    	<div class="heart"><span class="sec">60</span> </div>
+        <div class="star score">000</div>
     </div>
   
   <div id="player">
@@ -22,8 +25,30 @@
     
     <div id="floor">
     </div>
-    
+   
     <div id="GameScreen">
+      <div class="animated bounceInDown spider"></div>
+      <div class="animated infinite flash smile"></div>
+      <div class="animated infinite shake tap">**tap the screen to start**</div>
+    </div>
+
+    
+     <div id="SelectPlayer">
+      <div class="animated infinite shake selectp">**Please select the Player**</div>
+      <div class="flexbox">
+<div class="animated bounceInDown board b1" data-player="mrghost">
+   	  <div class="animated infinite pulse play mrghost" > </div>
+        <div class="title">The Ghost</div>
+      </div>
+      <div class="animated bounceInDown board b2" data-player="mrbandage">
+      	<div class="animated infinite pulse play mrbandage" > </div>
+        <div class="title">BANDAGE MAN</div>
+      </div>
+      <div class="animated bounceInDown board b3" data-player="mrpumpkin">
+      	<div class="animated infinite pulse play mrpumpkin" > </div>
+        <div class="title">PUMPKIN</div>
+      </div>
+      </div>
     </div>
     
     <div id="GameOver">
@@ -31,13 +56,13 @@
         <div class="score">Score 0 </div>
         
         <div class="gets">
-       	  <div class="getcoin">x 0</div>
-          <div class="getmushroom">x 0</div>
+       	  <div class="getpumpkin">x 0</div>
+          <div class="getgraveyard">x 0</div>
         </div>
     </div>
 </div>
-<script src="jquery-3.2.1.min.js"></script>
-<script src="game.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/game.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Animation */
+
+/*
+Game Start
+*/
+#GameScreen{
+	/*animation-duration:1.5s;*/
+}
+.tap{
+	animation-delay:0s;
+	animation-duration:2s;
+	}
+
+.spider{
+	animation-delay:1s;
+	animation-duration:2s;
+}
+.smile{
+	
+	animation-delay:1s;
+	animation-duration:4s;
+	}
+
+
+/*
+Select Player
+*/
+
+.selectp{ 
+animation-delay:2s;
+	animation-duration:2s;
+}
+
+.board.b1{ 
+	animation-delay:0s;
+	animation-duration:1.2s;
+}
+.board.b2{ 
+	animation-delay:0.6s;
+	animation-duration:1.2s;
+}
+.board.b3{ 
+	animation-delay:1.2s;
+	animation-duration:1.2s;
+}
