@@ -112,7 +112,7 @@ function startGame()
  
   //60 sec timer
 		//60 sec timer
-		 var counter = 60;
+		 var counter = 50;
 var timer = setInterval(countdown, 1000);
 		 
 		 function countdown(){
@@ -130,6 +130,8 @@ var timer = setInterval(countdown, 1000);
 				$('#GameOver').show();
 				$('.getpumpkin').text(" x " + getpumpkin);
 				$('.getgraveyard').text(" x " + getgraveyard);
+				$('.getflyghost').text(" x " + getflyghost);
+				$('.getdeath').text(" x " + getdeath);
 				$('.score').text(score);
 			}
 		}
@@ -153,11 +155,11 @@ function marioJump()
  //   $("#player").css("background-position", 230)
 
     $("#player").animate({
-        bottom: 320},500, 'swing',
+        bottom: 420},500, 'swing',
         function(){
  
             $("#player").animate({
-            bottom: playerFloorYPos},500,'swing',
+            bottom: playerFloorYPos},650,'swing',
             function()
             {
             isJumping = 0;
@@ -229,7 +231,7 @@ function loop()
 
     }
 	
-	//hit graveyard, -100
+	//hit graveyard, +50
 	
 	for(i = 0; i < arrgraveyardPool.length; i++)
     {
@@ -248,14 +250,14 @@ function loop()
         $(grave).remove();
 		
         arrgraveyardPool.splice(i, 1);
-        score -= 100;
+        score +=50;
 		getgraveyard+=1;
         $('#scoreBox .score').text( score);
         }
 
     }
  
-	//hit flyghost, -100
+	//hit flyghost, +10
 	
 	for(i = 0; i < arrflyghostPool.length; i++)
     {
@@ -274,7 +276,7 @@ function loop()
         $(flyghost).remove();
 		
         arrflyghostPool.splice(i, 1);
-        score += 50;
+        score += 10;
 		getflyghost+=1;
         $('#scoreBox .score').text( score);
         }
@@ -300,7 +302,7 @@ function loop()
         $(death).remove();
 		
         arrdeathPool.splice(i, 1);
-        score += 50;
+        score -= 100;
 		getdeath+=1;
         $('#scoreBox .score').text( score);
         }

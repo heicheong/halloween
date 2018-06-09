@@ -107,8 +107,10 @@ body
 	position:absolute;
 	top:10px;
 	left:105px;
-	font-size:19px;
+	font-size:17px;
 	font-family:"Verdana";
+	min-width:140px;
+	text-align:left;
 	}
 
 .pumpkin:after{
@@ -116,8 +118,8 @@ body
 	}
 	
 .graveyard{
-		width:210px;
-	height:148px;
+		width:200px;
+	height:118px;
 	background:url(../img/graveyard.png) no-repeat;
 	background-size:contain;
 	position:absolute;
@@ -132,8 +134,8 @@ body
 }
 
 .flyghost{
-		width:154px;
-	height:195px;
+		width:134px;
+	height:175px;
 	background:url(../img/flyghost.png) no-repeat;
 	background-size:contain;
 	position:absolute;
@@ -148,8 +150,8 @@ body
 }
 
 .death{
-	width:285px;
-	height:248px;
+	width:223px;
+	height:188px;
 	background:url(../img/death.png) no-repeat;
 	background-size:contain;
 	position:absolute;
@@ -159,7 +161,8 @@ body
 }
 
 .death:after{
-	content:"+Mr.Death";
+	content:"-Death God";
+	left:180px;
 }
 
 #scoreBox
@@ -173,7 +176,8 @@ body
 	overflow:hidden;
 	
 }
-#scoreBox div{
+#scoreBox div,
+#GameOver .star{
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-size:contain;
@@ -190,7 +194,9 @@ body
 	text-shadow:1px 1px 4px #1A1A1A;
 	
 }
-#scoreBox .star{
+#scoreBox .star,
+#GameOver .star
+{
 	background-image:url(../img/star.png);
 }
 #scoreBox .heart{
@@ -240,7 +246,7 @@ body
 
 	position:absolute;
 	right:20%;
-	top:-10px;
+	top:-30px;
 	}
 .smile{
 	background:url(../img/smile.png) no-repeat center bottom;
@@ -257,37 +263,40 @@ body
 
 
 #GameOver{
-	font-family:"Fixedsys";
-	font-size:45px;
+	font-family:"murder";
+	font-size:65px;
 	z-index:1000;
-	background:black;
-	opacity:0.88;
+	background:url(../img/boardbg.png) no-repeat center center #1A1A1A;
+	background-size:cover;
 	border-radius:15px;
-	border:3px solid white;
+	border:3px solid black;
 	
 	text-align:center;
-	width:597px;
+	width:80%;
 	height:auto;
 	margin:0 auto;
 	padding:15px;
 	position:relative;
 	top:80px;
 	color:#FFF;
+	text-shadow:2px 2px 3px #1A1A1A;
 	
 }
 
 #GameOver h2{
-	font-family:"Fixedsys";
-	font-size:55px;
-	color:#D2FF4D;
-	margin:10px auto;
-	padding:10px;
+	    font-family: "murder";
+    font-weight: normal;
+    font-size: 85px;
+    color: #F18F1D;
+    margin: 5px -9px;
+    padding: 5px;
+    display: block;
 }
 
 .getpumpkin{ 
 background:url(../img/pumpkin.png) no-repeat left center; 
 background-size:contain;
-height:55px;
+height:65px;
 padding:10px 10px 10px 90px;
 margin:10px;
 display:inline-block;
@@ -296,8 +305,26 @@ display:inline-block;
 .getgraveyard{ 
 background:url(../img/graveyard.png) no-repeat left center; 
 background-size:contain;
-height:55px;
+height:65px;
 padding:10px 10px 10px 90px;
+margin:10px;
+display:inline-block;
+}
+
+.getflyghost{ 
+background:url(../img/flyghost.png) no-repeat left center; 
+background-size:contain;
+height:65px;
+padding:10px 10px 10px 70px;
+margin:10px;
+display:inline-block;
+}
+
+.getdeath{ 
+background:url(../img/death.png) no-repeat left center; 
+background-size:contain;
+height:105px;
+padding:10px 10px 10px 145px;
 margin:10px;
 display:inline-block;
 }
@@ -315,7 +342,7 @@ display:inline-block;
 .selectp{ 
 	font-family:"murder";
 	color:#FFF;
-	font-size:42px;
+	font-size:60px;
 	display:block; 
 	margin:5% 0; 
 	text-align:center;
