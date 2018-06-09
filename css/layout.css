@@ -217,7 +217,7 @@ body
 
 #GameScreen
 {
-	background:url(../img/artboard-01.png) no-repeat center bottom #594B2F;
+	background:url(../img/artboard-01.png) no-repeat center center #594B2F;
 	width:100%;
 	height:100%;
 	z-index:999;
