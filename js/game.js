@@ -1,7 +1,7 @@
 // Game init
 
 
-var floorMoveSpeed = "-=10";
+var floorMoveSpeed = "-=15";
 var intGameLoop;
  
 //Game variable
@@ -59,14 +59,16 @@ $(document).ready(function(e) {
 
 		
     //when click the screen, start the game
-    $('#GameScreen').bind("touchstart click", function(){
+    $('#GameScreen').bind("touchstart click", function(e){
+		e.preventDefault();
 	   $('#GameScreen').hide();
    		$('#GameScreen').remove();
 		$('#SelectPlayer').show();
     	
     })
 	
-	$('.board').bind("touchstart click", function(){
+	$('.board').bind("touchstart click", function(e){
+		e.preventDefault();
 		selectedPlayer = $(this).attr("data-player");
 		console.log(selectedPlayer);
 		
