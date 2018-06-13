@@ -94,6 +94,11 @@ $(document).ready(function(e) {
 	   }
 	});
    
+   
+    $('#GameOver').bind("touchstart click",function(e){
+		 e.preventDefault();
+   		location.reload();
+    });
  
 });
 

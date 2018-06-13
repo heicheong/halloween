@@ -290,6 +290,7 @@ body
 	top:80px;
 	color:#FFF;
 	text-shadow:2px 2px 3px #1A1A1A;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	
 }
 
